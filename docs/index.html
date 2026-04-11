@@ -1,4 +1,17 @@
 <!DOCTYPE html>
+<style>
+    body {
+        font-family: sans-serif;
+        text-align: center;
+        font-size: 24px;
+    }
+    button {
+        width: 200px;
+        height: 50px;
+        font-size: 18px;
+    }
+</style>
+
 <head>
     <title>Smash Ultimate Random Move Generator</title>
 </head>
@@ -7,9 +20,11 @@
     <div>
         <span>Character: </span><span id="character">Mario</span>
     </div>
+
     <div>
         <span>Move: </span><span id="move">Jab</span>
-    </div>
+    </div> <br>
+
     <script defer charset="utf-8" src="move_generator.js"></script>
     <button type="button" onclick="generateMoves()">Generate Move</button>
 </body>
