@@ -253,6 +253,17 @@ function generateMoves() {
     document.getElementById('move').innerHTML = result[1];
 }
 
+function generateMovesDebug() {
+    const result = getRandomMove();
+    console.log(result);
+    charElem = document.getElementById('Character');
+    moveElem = document.getElementById('Move');
+    console.log(charElem);
+    console.log(moveElem);
+    charElem.innerHTML = result[0];
+    moveElem.innerHTML = result[1];
+}
+
 function printRandomMove() {
     const [name, move] = getRandomMove();
     console.log(`${name}: ${move}`);
