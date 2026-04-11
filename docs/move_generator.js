@@ -189,7 +189,7 @@ for (let i = 0; i < characters.length; i++) {
     }
     // Min Min
     else if (name === 'Min Min') {
-        character.removeMoves(['Forward Air', 'Back Air']);
+        character.removeMoves(['Forward Air', 'Back Air', 'Side Special', 'Neutral Special']);
         const arms = ['Ram Ram', 'Dragon', 'Megawatt'];
         for (const move of ['Forward Tilt', 'Forward Smash', 'Neutral Air']) {
             const newMoves = arms.map(arm => `${arm} ${move}`);
