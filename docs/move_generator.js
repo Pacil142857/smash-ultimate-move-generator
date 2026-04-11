@@ -54,6 +54,10 @@ class Character {
         return this.moves[Math.floor(Math.random() * this.moves.length)];
     }
 
+    getNumMoves() {
+        return this.moves.length;
+    }
+
     getName() {
         return this.name;
     }
@@ -63,11 +67,25 @@ class Characters extends Character {
     constructor(chars) {
         super("Something bad happened");
         this.characters = chars;
-        this.curCharacter = this.characters[Math.floor(Math.random() * this.characters.length)];
+        self.pickNewCharacter();
     }
 
     pickNewCharacter() {
-        this.curCharacter = this.characters[Math.floor(Math.random() * this.characters.length)];
+        // Pick a random character
+        // The RNG is weighted by the number of moves each character has
+        let weights = this.characters.map(c => c.getNumMoves());
+        for (let i = 1; i < weights.length; i++) {
+            weights[i] += weights[i - 1];
+        }
+        let random = Math.random() * weights[weights.length - 1];
+
+        this.curCharacter = this.characters[0];
+        for (let i = 0; i < weights.length; i++) {
+            if (weights[i] > random) {
+                this.curCharacter = this.characters[i];
+                break;
+            }
+        }
     }
 
     // Picks a new character
