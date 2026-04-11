@@ -8,4 +8,6 @@ The RNG works as follows: A random character is chosen—then, a random move fro
 * Pyra, Mythra, Both (they share down special)
 * Ryu, Ken, Both
 
+When one of these groups of characters is chosen, a specific character is chosen randomly such that characters with more moves are more likely to be chosen. Therefore, even though Pokémon Trainer has only one move (down special), they are not 25% likely to be chosen.
+
 Many unique moves are included, such as Terry's spot dodge attack or Kazuya's entire moveset. Some moves are broken up into separate moves (e.g., Hero's Menu is broken up into Bang, Kaboom, etc.), while others aren't (e.g., Hero's neutral and side specials).
