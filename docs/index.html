@@ -30,7 +30,6 @@
         <span>Move: </span><span id="move">Jab</span>
     </div> <br>
 
-    <script defer charset="utf-8" src="move_generator.js"></script>
     <button type="button" id="generate-button" onclick="generateMoves()">Generate Move</button>
     <br><br>
 
@@ -39,11 +38,5 @@
         <button type="button" class="point-button" id="add-button">Add Point</button> <br>
         <button type="button" class="point-button" id="remove-button">Remove Point</button>
     </div>
-    <script>
-        const addButton = document.getElementById("add-button");
-        const removeButton = document.getElementById("remove-button");
-        const counter = document.getElementById("point-counter");
-        addButton.addEventListener("click", () => counter.innerHTML++);
-        removeButton.addEventListener("click", () => counter.innerHTML--);
-    </script>
+    <script defer charset="utf-8" src="move_generator.js"></script>
 </body>

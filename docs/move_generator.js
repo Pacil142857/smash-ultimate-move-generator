@@ -64,12 +64,6 @@ class Character {
 }
 
 class Characters extends Character {
-    constructor(chars) {
-        super("Something bad happened");
-        this.characters = chars;
-        self.pickNewCharacter();
-    }
-
     pickNewCharacter() {
         // Pick a random character
         // The RNG is weighted by the number of moves each character has
@@ -86,6 +80,12 @@ class Characters extends Character {
                 break;
             }
         }
+    }
+
+    constructor(chars) {
+        super("Something bad happened");
+        this.characters = chars;
+        this.pickNewCharacter();
     }
 
     // Picks a new character
@@ -271,4 +271,10 @@ function generateMoves() {
     document.getElementById('move').innerHTML = result[1];
 }
 
-window.onload = generateMoves;
+document.addEventListener("DOMContentLoaded", () => generateMoves());
+
+const addButton = document.getElementById("add-button");
+const removeButton = document.getElementById("remove-button");
+const counter = document.getElementById("point-counter");
+addButton.addEventListener("click", () => counter.innerHTML++);
+removeButton.addEventListener("click", () => counter.innerHTML--);
