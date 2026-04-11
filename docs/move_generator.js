@@ -249,8 +249,8 @@ function getRandomMove() {
 
 function generateMoves() {
     const result = getRandomMove();
-    document.getElementById('Character').innerHTML = result[0];
-    document.getElementById('Move').innerHTML = result[1];
+    document.getElementById('character').innerHTML = result[0];
+    document.getElementById('move').innerHTML = result[1];
 }
 
 function printRandomMove() {
