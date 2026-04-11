@@ -235,7 +235,7 @@ for (let i = 0; i < characters.length; i++) {
     }
     // Steve
     else if (name === 'Steve') {
-        character.removeMoves(['Up Air', 'Forward Tilt']);
+        character.removeMoves(['Up Air', 'Forward Tilt', 'Neutral Air']);
         character.replaceMoves(['Neutral Special'], ['Mine', 'Place Block']);
     }
 
