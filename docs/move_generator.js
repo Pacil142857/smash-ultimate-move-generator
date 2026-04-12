@@ -182,7 +182,7 @@ for (let i = 0; i < characters.length; i++) {
     else if (name === 'Ryu/Ken (either)') {
         character.setMoves(['Light Jab', 'Heavy Jab (Close)',
                              'Light Forward Tilt (Close)', 'Light Forward Tilt (Far)',
-                             'Light Up Tilt', 'Heavy Up Tilt', 'LIght Down Tilt',
+                             'Light Up Tilt', 'Heavy Up Tilt', 'Light Down Tilt',
                              'Heavy Down Tilt', 'Dash Attack', 'Up Smash',
                              'Down Smash', 'Forward Air', 'Back Air', 'Down Air',
                              'Hadoken', 'Tatsumaki Senpukyaku', 'Shoryuken',
