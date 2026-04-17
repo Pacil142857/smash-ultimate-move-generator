@@ -161,7 +161,7 @@ for (let i = 0; i < characters.length; i++) {
     // Mega Man, Pokémon Trainer, Squirtle, Ivysaur, Charizard,
     // Pyra, Mythra, Pyra/Mythra (either)
     else if (name === 'Mega Man') {
-        character.removeMoves(['Forward Tilt', 'Neutral Air']);
+        character.replaceMoves(['Forward Tilt', 'Jab', 'Neutral Air'], ['Jab/Forward Tilt/Neutral Air']);
     } else if (name === 'Pokémon Trainer' || name === 'Pyra/Mythra (either)') {
         character.setMoves(['Down Special']);
         if (name === 'Pokémon Trainer') {
@@ -209,7 +209,7 @@ for (let i = 0; i < characters.length; i++) {
     else if (name === 'Min Min') {
         character.removeMoves(['Forward Air', 'Back Air', 'Side Special', 'Neutral Special']);
         const arms = ['Ram Ram', 'Dragon', 'Megawatt'];
-        for (const move of ['Forward Tilt', 'Forward Smash', 'Neutral Air']) {
+        for (const move of ['Forward Tilt/Light Forward Air/Light Back Air', 'Forward Smash/Heavy Forward Air/Heavy Back Air', 'Neutral Air']) {
             const newMoves = arms.map(arm => `${arm} ${move}`);
             character.replaceMoves([move], newMoves);
         }
@@ -235,8 +235,8 @@ for (let i = 0; i < characters.length; i++) {
     }
     // Steve
     else if (name === 'Steve') {
-        character.removeMoves(['Up Air', 'Forward Tilt', 'Neutral Air']);
-        character.replaceMoves(['Neutral Special'], ['Mine', 'Place Block']);
+        character.replaceMoves(['Forward Tilt', 'Jab', 'Neutral Air'], ['Jab/Forward Tilt/Neutral Air']);
+        character.replaceMoves(['Up Tilt', 'Up Air'], ['Up Tilt/Up Air']);
     }
 
     // Zair characters
