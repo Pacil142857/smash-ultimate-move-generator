@@ -108,15 +108,23 @@ const specialMoves = ['Neutral Special', 'Up Special', 'Side Special', 'Down Spe
 const ptChars = [];
 const shotos = [];
 const pam = [];
+const links = [];
 
 // Handle all of the non-standard characters
 for (let i = 0; i < characters.length; i++) {
     const character = characters[i];
     const name = character.getName();
     
+    // Group the three links
+    if (name === 'Link' || name === 'Young Link' || name === 'Toon Link') {
+        links.push(character);
+    } else if (name == 'Donkey Kong') {
+        character.addMove('Cargo Throw');
+    }
+
     // Characters that replace a move with a set of moves
     // Mii Brawler, Mii Swordfighter, Mii Gunner, Hero, Sora, Cloud, Joker
-    if (name === 'Mii Brawler') {
+    else if (name === 'Mii Brawler') {
         character.replaceMoves(specialMoves,
                                 ['Shot Put, Flashing Mach Punch, Exploding Side Kick',
                                  'Onslaught', 'Burning Drop Kick', 'Suplex',
@@ -246,18 +254,19 @@ for (let i = 0; i < characters.length; i++) {
 }
 
 // Group together certain characters
-// Squirtle/Ivysaur/Charizard, Ryu/Ken, Pyra/Mythra
+// Squirtle/Ivysaur/Charizard, Ryu/Ken, Pyra/Mythra, Link/Young Link/Toon Link
 const ptChar = new Characters(ptChars);
 const aegis = new Characters(pam);
 const shoto = new Characters(shotos);
+const link = new Characters(links);
 
 // Remove individual characters from the list of characters
 for (let i = characters.length - 1; i >= 0; i--) {
-    if (ptChars.includes(characters[i]) || pam.includes(characters[i]) || shotos.includes(characters[i])) {
+    if (ptChars.includes(characters[i]) || pam.includes(characters[i]) || shotos.includes(characters[i] || links.includes(characters[i]))) {
         characters.splice(i, 1);
     }
 }
-characters.push(ptChar, aegis, shoto);
+characters.push(ptChar, aegis, shoto, link);
 
 // The actual code
 function getRandomMove() {
