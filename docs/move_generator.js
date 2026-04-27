@@ -168,7 +168,7 @@ for (let i = 0; i < characters.length; i++) {
     // Characters that remove moves
     // Mega Man, Pokémon Trainer, Squirtle, Ivysaur, Charizard,
     // Pyra, Mythra, Pyra/Mythra (either)
-    else if (name === 'Mega Man') {
+    else if (name === 'Megaman') {
         character.replaceMoves(['Forward Tilt', 'Jab', 'Neutral Air'], ['Jab/Forward Tilt/Neutral Air']);
     } else if (name === 'Pokémon Trainer' || name === 'Pyra/Mythra (either)') {
         character.setMoves(['Down Special']);
