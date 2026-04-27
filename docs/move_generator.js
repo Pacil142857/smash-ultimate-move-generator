@@ -215,11 +215,11 @@ for (let i = 0; i < characters.length; i++) {
     }
     // Min Min
     else if (name === 'Min Min') {
-        character.removeMoves(['Forward Air', 'Back Air', 'Side Special', 'Neutral Special']);
+        character.removeMoves(['Forward Air', 'Back Air', 'Side Special', 'Neutral Special', 'Forward Smash', 'Forward Tilt']);
         const arms = ['Ram Ram', 'Dragon', 'Megawatt'];
         for (const move of ['Forward Tilt/Light Forward Air/Light Back Air', 'Forward Smash/Heavy Forward Air/Heavy Back Air', 'Neutral Air']) {
             const newMoves = arms.map(arm => `${arm} ${move}`);
-            character.replaceMoves([move], newMoves);
+            character.addMoves(newMoves);
         }
     }
     // Kazuya
